@@ -1,5 +1,9 @@
+import MyRockets from './MyRockets';
+
 const MyProfile = () => (
-  <div>MyProfile</div>
+  <div>
+    <MyRockets />
+  </div>
 );
 
 export default MyProfile;
