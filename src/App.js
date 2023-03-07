@@ -13,6 +13,7 @@ function App() {
   useEffect(() => {
     dispatch(getRockets());
   }, [dispatch]);
+
   return (
     <div className="App">
       <Navbar />
