@@ -12,9 +12,16 @@ const Rockets = () => {
   }, [dispatch]);
 
   return (
-    <section className="rockets_wrapper">
-      <div>
-        {rocketsList.map((rokt) => <Rocket key={rokt.id} name={rokt.name} />)}
+    <section className="rockets_section">
+      <div className="rockets_wrapper">
+        {rocketsList.map((rokt) => (
+          <Rocket
+            key={rokt.id}
+            name={rokt.name}
+            description={rokt.description}
+            img={rokt.flickr_images[0]}
+          />
+        ))}
       </div>
     </section>
   );

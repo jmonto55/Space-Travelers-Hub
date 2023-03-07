@@ -1,13 +1,16 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+// SpaceX Rockets API link
 const url = 'https://api.spacexdata.com/v4/rockets';
 
+// Initial state for the store
 const initialState = {
   rocketsList: [],
   isLoading: false,
 };
 
+// Exportable method to fetch data from the SpaceX API
 export const getRockets = createAsyncThunk('rockets/getRockets', async (name, thunkAPI) => {
   try {
     const resp = await axios(url);
@@ -17,6 +20,7 @@ export const getRockets = createAsyncThunk('rockets/getRockets', async (name, th
   }
 });
 
+// Rocket slice with reducers & actions
 const rocketsSlice = createSlice({
   name: 'rockets',
   initialState,
@@ -41,6 +45,7 @@ const rocketsSlice = createSlice({
   },
 });
 
+// Exports
 export const { reserveRocket } = rocketsSlice.actions;
 
 export default rocketsSlice.reducer;
