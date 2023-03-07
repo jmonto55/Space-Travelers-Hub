@@ -25,8 +25,8 @@ const rocketsSlice = createSlice({
   name: 'rockets',
   initialState,
   reducers: {
-    reserveRocket: (state, { payload }) => {
-      const rocket = state.rocketsList.find((rokt) => rokt.id === payload.id);
+    reserveRocket: (state, action) => {
+      const rocket = state.rocketsList.find((rokt) => rokt.id === action.payload);
       rocket.reserved = !rocket.reserved;
     },
   },

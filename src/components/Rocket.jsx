@@ -1,9 +1,12 @@
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { reserveRocket } from '../redux/rockets/rocketsSlice';
 
 const Rocket = ({
   id, name, description, img, reserved,
 }) => {
-  console.log(reserved);
+  const dispatch = useDispatch();
+
   return (
     <div id={id}>
       <img className="rocket_image" src={img} alt={name} />
@@ -17,6 +20,9 @@ const Rocket = ({
         <button
           className="reserve_btn"
           type="button"
+          onClick={() => {
+            dispatch(reserveRocket(id));
+          }}
         >
           Reserve Rocket
         </button>
@@ -25,6 +31,9 @@ const Rocket = ({
         <button
           className="cancel_btn"
           type="button"
+          onClick={() => {
+            dispatch(reserveRocket(id));
+          }}
         >
           Cancel Reservation
         </button>
