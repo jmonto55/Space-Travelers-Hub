@@ -11,13 +11,9 @@ const initialState = {
 };
 
 // Exportable method to fetch data from the SpaceX API
-export const getRockets = createAsyncThunk('rockets/getRockets', async (name, thunkAPI) => {
-  try {
-    const resp = await axios(url);
-    return resp.data;
-  } catch (error) {
-    return thunkAPI.rejectWithValue('something went wrong');
-  }
+export const getRockets = createAsyncThunk('rockets/getRockets', async () => {
+  const resp = await axios(url);
+  return resp.data;
 });
 
 // Rocket slice with reducers & actions
@@ -42,8 +38,9 @@ const rocketsSlice = createSlice({
           rokt.reserved = false;
         });
       })
-      .addCase(getRockets.rejected, (state) => {
+      .addCase(getRockets.rejected, (state, action) => {
         state.isLoading = false;
+        state.error = action.error.message;
       });
   },
 });
