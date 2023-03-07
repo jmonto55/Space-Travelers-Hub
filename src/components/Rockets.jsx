@@ -17,9 +17,11 @@ const Rockets = () => {
         {rocketsList.map((rokt) => (
           <Rocket
             key={rokt.id}
+            id={rokt.id}
             name={rokt.name}
             description={rokt.description}
             img={rokt.flickr_images[0]}
+            reserved={rokt.reserved}
           />
         ))}
       </div>

@@ -38,6 +38,9 @@ const rocketsSlice = createSlice({
       .addCase(getRockets.fulfilled, (state, action) => {
         state.isLoading = false;
         state.rocketsList = action.payload;
+        state.rocketsList.forEach((rokt) => {
+          rokt.reserved = false;
+        });
       })
       .addCase(getRockets.rejected, (state) => {
         state.isLoading = false;
