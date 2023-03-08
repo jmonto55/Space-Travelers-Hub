@@ -8,7 +8,7 @@ const Navbar = () => (
         <img className="w-14" src={planet} alt="space hub logo" />
         <h1 className="ml-5 text-3xl font-semibold">Space Travelers Hub</h1>
       </div>
-      <ul className="flex gap-3">
+      <ul className="flex gap-10">
         <li>
           <Link className="font-semibold text-lg hover:text-slate-600" to="/">Rockets</Link>
         </li>
