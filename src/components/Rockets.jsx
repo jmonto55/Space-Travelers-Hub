@@ -5,8 +5,8 @@ const Rockets = () => {
   const { rocketsList } = useSelector((store) => store.rockets);
 
   return (
-    <section className="rockets_section">
-      <div className="rockets_wrapper">
+    <section className="flex justify-center items-center px-20 py-5">
+      <div className="flex flex-col gap-10">
         {rocketsList.map((rokt) => (
           <Rocket
             key={rokt.id}
