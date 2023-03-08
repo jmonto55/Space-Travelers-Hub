@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import planet from '../assets/planet.png';
 
 const Navbar = () => (
-  <div className="">
+  <div className="max-w-7xl m-auto w-full">
     <nav className="flex px-20 py-5 justify-between items-center">
       <div className="flex justify-center items-center">
         <img className="w-14" src={planet} alt="space hub logo" />

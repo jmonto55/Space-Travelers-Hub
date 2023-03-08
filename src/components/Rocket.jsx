@@ -8,7 +8,7 @@ const Rocket = ({
   const dispatch = useDispatch();
 
   return (
-    <div className="flex justify-between items-center h-44" id={id}>
+    <div className="flex justify-start items-center h-44" id={id}>
       <img className="w-60 h-full" src={img} alt={name} />
       <div className="flex flex-col justify-between px-5 h-full">
         <h2 className="font-semibold text-xl">{name}</h2>
