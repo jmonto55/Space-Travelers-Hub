@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import rocket from '../assets/rocket.svg';
 
 const Navbar = () => (
@@ -10,13 +9,13 @@ const Navbar = () => (
       </div>
       <ul className="flex gap-10">
         <li>
-          <Link className="font-semibold text-lg hover:text-slate-600" to="/">Rockets</Link>
+          Rockets
         </li>
         <li>
-          <Link className="font-semibold text-lg hover:text-slate-600" to="missions">Missions</Link>
+          Missions
         </li>
         <li>
-          <Link className="font-semibold text-lg hover:text-slate-600" to="myprofile">My Profile</Link>
+          My Profile
         </li>
       </ul>
     </nav>

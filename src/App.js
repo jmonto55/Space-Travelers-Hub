@@ -15,7 +15,7 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div className="App flex flex-col">
+    <div id="app" className="App flex flex-col">
       <Navbar />
       <Routes>
         <Route path="/" element={<Rockets />} />
