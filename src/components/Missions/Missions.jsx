@@ -12,9 +12,9 @@ const Missions = () => {
         <table className="w-full border-collapse border">
           <thead>
             <tr className="h-10">
-              <th className="border text-left">Mission</th>
-              <th className="border text-left">Description</th>
-              <th className="border text-left">Status</th>
+              <th className="border text-left p-2 text-xl">Mission</th>
+              <th className="border text-left p-2 text-xl">Description</th>
+              <th className="border text-left p-2 text-xl w-36">Status</th>
               <th>&nbsp;</th>
             </tr>
           </thead>
