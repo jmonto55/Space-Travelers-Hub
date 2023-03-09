@@ -5,9 +5,7 @@ Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div
-        class="w-1/2"
-      >
+      <div>
         <h2
           class="font-semibold text-2xl mb-3"
         >
@@ -15,14 +13,18 @@ Object {
         </h2>
         <ul
           class="border-solid border-t-2 border-neutral-300"
-        />
+        >
+          <li
+            class="p-5 text-lg"
+          >
+            No Rockets yet
+          </li>
+        </ul>
       </div>
     </div>
   </body>,
   "container": <div>
-    <div
-      class="w-1/2"
-    >
+    <div>
       <h2
         class="font-semibold text-2xl mb-3"
       >
@@ -30,7 +32,13 @@ Object {
       </h2>
       <ul
         class="border-solid border-t-2 border-neutral-300"
-      />
+      >
+        <li
+          class="p-5 text-lg"
+        >
+          No Rockets yet
+        </li>
+      </ul>
     </div>
   </div>,
   "debug": [Function],
