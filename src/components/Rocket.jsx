@@ -13,7 +13,7 @@ const Rocket = ({
       <div className="flex flex-col justify-between px-5 h-full">
         <h2 className="font-semibold text-xl">{name}</h2>
         <p>
-          {reserved && <span className="p-0.5 mr-2 rounded-md text-white bg-teal-500">Reserved</span>}
+          {reserved && <span className="p-0.5 mr-2 rounded-md text-white bg-cyan-600">Reserved</span>}
           {description}
         </p>
         {!reserved && (
