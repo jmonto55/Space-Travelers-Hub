@@ -12,6 +12,7 @@ const Missions = () => {
       dispatch(getMissions());
     }
   }, [missions, dispatch]);
+
   return (
     <>
       <section data-testid="Missions" className="container mx-auto py-5">

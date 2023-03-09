@@ -8,7 +8,7 @@ import Missions from './components/Missions/Missions';
 import Rockets from './components/Rockets';
 import MyProfile from './components/MyProfile';
 
-function App() {
+const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -25,6 +25,6 @@ function App() {
       </Routes>
     </div>
   );
-}
+};
 
 export default App;
