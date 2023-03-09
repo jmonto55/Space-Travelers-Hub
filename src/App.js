@@ -3,18 +3,16 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 
 import { getRockets } from './redux/rockets/rocketsSlice';
-import { getMissions } from './redux/missions/missionsSlice';
 import Navbar from './components/Navbar';
 import Missions from './components/Missions/Missions';
 import Rockets from './components/Rockets';
 import MyProfile from './components/MyProfile';
 
-function App() {
+const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getRockets());
-    dispatch(getMissions());
   }, [dispatch]);
 
   return (
@@ -27,6 +25,6 @@ function App() {
       </Routes>
     </div>
   );
-}
+};
 
 export default App;

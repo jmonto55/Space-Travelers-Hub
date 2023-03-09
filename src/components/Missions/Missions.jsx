@@ -1,10 +1,17 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getMissions } from '../../redux/missions/missionsSlice';
 import Mission from './Mission';
 
 const Missions = () => {
   const { missions } = useSelector((store) => store.missions);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (!missions.length) {
+      dispatch(getMissions());
+    }
+  }, [missions, dispatch]);
 
   return (
     <>

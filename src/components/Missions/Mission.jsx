@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 
@@ -10,7 +9,7 @@ const Mission = ({
   const dispatch = useDispatch();
   return (
     <>
-      <tr className={index % 2 === 0 ? 'bg-gray-100' : ''}>
+      <tr className={!(index % 2) ? 'bg-gray-100' : ''}>
         <td className="p-2 border align-top">
           <p className="font-bold text-xl">
             {name}
