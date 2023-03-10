@@ -18,7 +18,7 @@ const Rocket = ({
         </p>
         {!reserved && (
         <button
-          className="w-32 p-2 mr-2 rounded-md text-white bg-blue-500 hover:bg-blue-600"
+          className="w-36 p-2 mr-2 rounded-md text-white bg-blue-500 hover:bg-blue-600"
           type="button"
           onClick={() => {
             dispatch(reserveRocket(id));

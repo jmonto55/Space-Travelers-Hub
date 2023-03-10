@@ -8,7 +8,7 @@ describe('Test suite for the Rocket component', () => {
   it('Should render a Snapshot of the Rocket component', () => {
     const rocket = render(
       <Provider store={store}>
-        <Rocket />
+        <Rocket id="id" name="name" description="des" img="img" reserved={false} />
       </Provider>,
     );
     expect(rocket).toMatchSnapshot();
@@ -17,7 +17,7 @@ describe('Test suite for the Rocket component', () => {
   test('Should test if the text "Reserve Rocket" is inside the Rocket component', () => {
     render(
       <Provider store={store}>
-        <Rocket />
+        <Rocket id="id" name="name" description="des" img="img" reserved={false} />
       </Provider>,
     );
     expect(screen.getByText('Reserve Rocket')).toBeInTheDocument();
